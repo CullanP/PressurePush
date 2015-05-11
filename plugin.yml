@@ -19,4 +19,4 @@ permissions:
     description: Give players with op everything by default
   pp.use:
     default: true
-    description: Give players with op everything by default
+    description: Give default players the permission to use pressureplates
