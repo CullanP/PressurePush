@@ -1,0 +1,22 @@
+name: PressurePush
+main: com.gmail.munjavk.pressurepush.PressurePush
+version: 1.0
+author: euro1988
+commands:
+  ppload:
+    description: Reloads the config for PressurePush
+    usage: /ppload
+  ppcreate:
+    description: Toggleable on or off
+    usage: /ppcreate
+  pressurepush:
+    description: Gives you a detailed information about the plugin and its commands
+    usage: /pressurepush
+    aliases: [pp]
+permissions:
+  pp.*:
+    default: op
+    description: Give players with op everything by default
+  pp.use:
+    default: true
+    description: Give players with op everything by default
