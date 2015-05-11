@@ -70,14 +70,14 @@ public class PressurePush extends JavaPlugin implements Listener {
       	for (String s : getConfig().getStringList("help")) {
         	player.sendMessage(ChatColor.translateAlternateColorCodes('&', s).replace("{version}", getDescription().getVersion()));	
         }
-      } else if (args[0].equalsIgnoreCase("on") || (player.isOp())) {
+      } else if (args[0].equalsIgnoreCase("on") && player.hasPermission("pp.create")) {
     	createactive.add(player.getName());
         player.sendMessage(ChatColor.GOLD + "Place the pressure plate somewhere to make it a PressurePush plate, type the command again to disable it");
         if (getConfig().getBoolean("UnlimitedPlates") == true) {
           player.getInventory().addItem(new ItemStack[] { new ItemStack(Material.STONE_PLATE, -1) });
           player.getInventory().addItem(new ItemStack[] { new ItemStack(Material.WOOD_PLATE, -1) });
         }
-      } else if (args[0].equalsIgnoreCase("off") || (player.isOp())) {
+      } else if (args[0].equalsIgnoreCase("off") && player.hasPermission("pp.create")) {
     	createactive.remove(player.getName());
         player.sendMessage(ChatColor.RED + "You've de-toggled the creation of PressurePush plates!");
         if (getConfig().getBoolean("UnlimitedPlates") == true) {
