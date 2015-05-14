@@ -33,8 +33,7 @@ public class PressurePush extends JavaPlugin implements Listener {
     System.out.println("[PressurePush] Disabled");
   }
   
-  public void onEnable()
-  {
+  public void onEnable() {
     System.out.println("[PressurePush] Enabled");
     Bukkit.getPluginManager().registerEvents(this, this);
     getConfig().options().copyDefaults(true);
@@ -93,7 +92,7 @@ public class PressurePush extends JavaPlugin implements Listener {
   }
   
   @EventHandler(ignoreCancelled = true)
-  public void BlockPlaceEvent(BlockPlaceEvent event) throws IOException {
+  public void BlockPlaceEvent(BlockPlaceEvent event) {
     Player p = event.getPlayer();
     if (!p.hasPermission("pp.create")) {
     	return;
@@ -117,7 +116,7 @@ public class PressurePush extends JavaPlugin implements Listener {
   }
   
   @EventHandler(ignoreCancelled = true)
-  public void BlockBreakEvent(BlockBreakEvent event) throws IOException {
+  public void BlockBreakEvent(BlockBreakEvent event) {
     Player p = event.getPlayer();
     if (!p.hasPermission("pp.destroy")) {
     	return;
@@ -154,7 +153,8 @@ public class PressurePush extends JavaPlugin implements Listener {
     if (!p.hasPermission("pp.use")) {
     	return;
     }
-    if (e.getAction().equals(Action.PHYSICAL) && e.getClickedBlock().getType() == Material.STONE_PLATE || e.getClickedBlock().getType() == Material.WOOD_PLATE) {
+    if (e.getAction().equals(Action.PHYSICAL) && (p.hasPermission("pp.use") && e.getClickedBlock().getType() == Material.STONE_PLATE
+    		|| e.getClickedBlock().getType() == Material.WOOD_PLATE)) {
       double strength = getConfig().getDouble("Strength");
       double up = getConfig().getDouble("Up");
       Location location = e.getClickedBlock().getLocation();
