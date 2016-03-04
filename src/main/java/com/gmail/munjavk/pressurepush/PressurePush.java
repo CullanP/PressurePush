@@ -166,19 +166,19 @@ public class PressurePush extends JavaPlugin implements Listener {
       if (getConfig().getInt("Sound") == 2) {
         Vector v = p.getLocation().getDirection().multiply(strength).setY(up);
         p.setVelocity(v);
-        p.playSound(p.getLocation(), Sound.IRONGOLEM_HIT, 10.0F, 2.0F);
+        p.playSound(p.getLocation(), Sound.ENTITY_IRONGOLEM_HURT, 10.0F, 2.0F);
         e.setCancelled(true);
       }
       if (getConfig().getInt("Sound") == 4) {
         Vector v = p.getLocation().getDirection().multiply(strength).setY(up);
         p.setVelocity(v);
-        p.playSound(p.getLocation(), Sound.BLAZE_DEATH, 1.0F, 1.0F);
+        p.playSound(p.getLocation(), Sound.ENTITY_BLAZE_DEATH, 1.0F, 1.0F);
         e.setCancelled(true);
       }
       if (getConfig().getInt("Sound") == 1) {
         Vector v = p.getLocation().getDirection().multiply(strength).setY(up);
         p.setVelocity(v);
-        p.playSound(p.getLocation(), Sound.ENDERDRAGON_HIT, 10.0F, 2.0F);
+        p.playSound(p.getLocation(), Sound.ENTITY_ENDERDRAGON_HURT, 10.0F, 2.0F);
         e.setCancelled(true);
       }
       if (getConfig().getInt("Sound") == 0) {
@@ -189,7 +189,7 @@ public class PressurePush extends JavaPlugin implements Listener {
       if (getConfig().getInt("Sound") == 3) {
         Vector v = p.getLocation().getDirection().multiply(strength).setY(up);
         p.setVelocity(v);
-        p.playSound(p.getLocation(), Sound.ENDERDRAGON_WINGS, 10.0F, 2.0F);
+        p.playSound(p.getLocation(), Sound.ENTITY_ENDERDRAGON_FLAP, 10.0F, 2.0F);
         e.setCancelled(true);
       }
       disableFall.add(p.getName());
