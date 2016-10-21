@@ -1,7 +1,7 @@
 name: PressurePush
 main: com.gmail.munjavk.pressurepush.PressurePush
-version: 1.0
-author: euro1988
+version: 1.2
+author: euro1988, CullanP
 commands:
   ppload:
     description: Reloads the config for PressurePush
@@ -13,10 +13,13 @@ commands:
     description: Gives you a detailed information about the plugin and its commands
     usage: /pressurepush
     aliases: [pp]
+  ppset:
+    description: Sets the plate strength,up
+    usage: /ppset
 permissions:
   pp.*:
     default: op
     description: Give players with op everything by default
   pp.use:
     default: true
-    description: Give default players the permission to use pressureplates
+    description: Give players with op everything by default

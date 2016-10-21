@@ -1,21 +1,22 @@
-## PressurePush by euro1988 ##
-## http://dev.bukkit.org/bukkit-plugins/pressurepush/ ##
+## PressurePush by euro1988, Revisioned by CullanP ##
+## https://www.spigotmc.org/resources/pressurepush.6975/ ##
 ## The values you input in Strength and Up are decimal numbers, eg. 1.5 ##
 ## Experiment with different values ##
 ## Strength is how much the player will be pushed forward ##
 ## Up is how much the player will be pushed in the air ##
-## Have a nice day and enjoy the plugin ;) ##
-## NoFallDamageTimeMob is applied only when the mob steps on the plate and it lasts for the time you define it in seconds ##
-## Sound can be chosen from numbers 0-4, 0 means no sound ##
+## Sound can be chosen by name, for 1.8, sounds can be found here: https://github.com/Attano/Spigot-1.8/blob/master/org/bukkit/Sound.java ##
+## for 1.10, sounds can be found here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html ##
 Strength: 2.0
 Up: 1.1
 mobUse: false
-Sound: 1
-NoFallDamageTimeMob: 3
 UnlimitedPlates: false
+Sound:
+  Name: IRONGOLEM_HIT
+  Volume: 10.0
+  Pitch: 2.0
 help:
-  - "&b      << -- PressurePush -- >>"
-  - "&c&oPressurePush Version: {version} by euro1988 // Edited by CullanP"
-  - "&a/ppcreate on  - toggles the creation of PressurePush plates to true"
-  - "&a/ppcreate off  - toggles the creation of PressurePush plates to false"
-  - "&a/ppload  - reloads the PressurePush config"
+  - "&6      << -- PressurePush -- >>"
+  - "&ePressurePush Version: {version} by euro1988 // Edited by CullanP"
+  - "&7/ppcreate on  &8- &aToggle the creation of PressurePush plates to true"
+  - "&7/ppcreate off  &8- &aToggle the creation of PressurePush plates to false"
+  - "&7/ppload  &8- &aReloads the PressurePush config"
